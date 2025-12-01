@@ -25,12 +25,12 @@ export async function listRaffles(params: ListRafflesParams = {}) {
   }
 
   const query = searchParams.toString()
-  const endpoint = `/api/v1/raffles${query ? `?${query}` : ''}`
+  const endpoint = `/api/v1/public/raffles${query ? `?${query}` : ''}`
 
   return publicFetch<ListRafflesResponse>(endpoint)
 }
 
 export async function getRaffleById(id: string, token?: string) {
   const options = token ? { headers: { Authorization: token } } : {}
-  return publicFetch<RaffleDetail>(`/api/v1/raffles/${id}`, options)
+  return publicFetch<RaffleDetail>(`/api/v1/public/raffles/${id}`, options)
 }

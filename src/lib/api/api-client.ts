@@ -81,7 +81,7 @@ export async function publicFetch<T>(
   endpoint: string,
   options: RequestOptions = {}
 ): Promise<ApiResponse<T>> {
-  const url = `${env.publicApiUrl}${endpoint}`
+  const url = `${env.apiUrl}${endpoint}`
   return baseFetch<T>(url, options)
 }
 
@@ -90,7 +90,7 @@ export async function authFetch<T>(
   token: string,
   options: RequestOptions = {}
 ): Promise<ApiResponse<T>> {
-  const url = `${env.authApiUrl}${endpoint}`
+  const url = `${env.apiUrl}${endpoint}`
 
   return baseFetch<T>(url, {
     ...options,

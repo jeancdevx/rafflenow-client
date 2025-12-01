@@ -1,6 +1,5 @@
 export const env = {
-  publicApiUrl: import.meta.env.VITE_PUBLIC_API_URL as string,
-  authApiUrl: import.meta.env.VITE_AUTH_API_URL as string,
+  apiUrl: import.meta.env.VITE_API_URL as string,
   cdnUrl: import.meta.env.VITE_CDN_URL as string,
   cognito: {
     region: import.meta.env.VITE_COGNITO_REGION as string,
@@ -10,8 +9,7 @@ export const env = {
 } as const
 
 const requiredVars = [
-  'VITE_PUBLIC_API_URL',
-  'VITE_AUTH_API_URL',
+  'VITE_API_URL',
   'VITE_CDN_URL',
   'VITE_COGNITO_REGION',
   'VITE_COGNITO_USER_POOL_ID',
