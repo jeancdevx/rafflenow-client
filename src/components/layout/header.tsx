@@ -110,9 +110,9 @@ const Header = () => {
                     <DropdownMenuSeparator />
                     <DropdownMenuItem
                       onClick={handleSignOut}
-                      className='text-white flex items-center justify-center bg-destructive/70 cursor-pointer hover:bg-destructive/60! hover:text-white!'
+                      className='text-white flex items-center justify-center bg-destructive/70 cursor-pointer hover:bg-destructive/60! hover:text-white! text-xs'
                     >
-                      <LogOut className='size-5 text-white' />
+                      <LogOut className='size-4 text-white' />
                       <span className='font-semibold'>Cerrar sesión</span>
                     </DropdownMenuItem>
                   </>
